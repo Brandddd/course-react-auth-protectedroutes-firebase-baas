@@ -10,7 +10,7 @@ export function Register() {
   });
 
   const { signup } = useAuth(); //!EXPORTACION DEL OBJETO TIPO SIGNUP
-  const navigate = useNavigate();
+  const navigate = useNavigate();  // Gracias a esta funcion podemos navegar por los componentes
   const [error, setError] = useState("");
 
   const handleChanges = ({ target: { name, value } }) => {
@@ -78,7 +78,15 @@ export function Register() {
           />
         </div>
 
-        <button className="bg-slate-800 hover:bg-slate-500 text-white font-sans py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">Registrarse</button>
+        <div className="flex items-center justify-between">
+          <button className="inline-block bg-slate-800 hover:bg-slate-500 text-white font-sans py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
+            Registrarse
+          </button>
+
+          <button onClick={() => navigate(-1)} className="inline-block bg-slate-800 hover:bg-slate-500 text-white font-sans py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
+            Volver
+          </button>
+        </div>
       </form>
     </div>
   );
