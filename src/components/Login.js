@@ -87,13 +87,25 @@ export function Login() {
           />
         </div>
 
-        <button className="bg-slate-800 hover:bg-slate-500 text-white font-sans py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
-          Iniciar sesion
-        </button>
-      </form>
+        <div className="flex items-center justify-between">
+          <button className="bg-slate-800 hover:bg-slate-500 text-white font-sans py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
+            Ingresar
+          </button>
+
+          <a
+            href="#!"
+            className="inline-block align-baseline font-sans text-sm text-blue-500 hover:text-blue-800"
+          >
+            ¿Olvidaste tu contraseña? 
+          </a>
+        </div>
+      </form> 
 
       <p className="my-4 text-sm flex justify-between px-3 text-white">
-        ¿No tienes una cuenta? <Link to="/register">Registrarse</Link>
+        ¿No tienes una cuenta?{" "}
+        <Link to="/register" className="hover:text-blue-500">
+          Registrarse
+        </Link>
       </p>
 
       <button
@@ -107,4 +119,4 @@ export function Login() {
 }
 
 // * text-sm -> Texto pequeño, font-bold -> fuente, w-full -> abarcar ancho máximo,
-// TODO : RESET PASSWORD
+// TODO : RESET PASSWORD (Boton creado, falta 1:57:00)
