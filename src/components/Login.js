@@ -96,10 +96,10 @@ export function Login() {
             href="#!"
             className="inline-block align-baseline font-sans text-sm text-blue-500 hover:text-blue-800"
           >
-            ¿Olvidaste tu contraseña? 
+            <Link to="/resetpassword">¿Olvidaste tu contraseña?</Link>
           </a>
         </div>
-      </form> 
+      </form>
 
       <p className="my-4 text-sm flex justify-between px-3 text-white">
         ¿No tienes una cuenta?{" "}

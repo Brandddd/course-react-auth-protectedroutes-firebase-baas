@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"; //Dos componentes para definir multiples rutas o una sola ruta
+import { ForgotPassword } from "./components/ForgotPassword";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
 import { ProtectedRoute } from "./components/ProtectedRoute";
@@ -20,6 +21,7 @@ function App() {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/resetpassword" element={<ForgotPassword />} />
         </Routes>
       </AuthProvider>
     </div>
