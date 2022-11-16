@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"; //Dos componentes para definir
 import { ForgotPassword } from "./components/ForgotPassword";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
+import { Profile } from "./components/Profile";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Register } from "./components/Register";
 import { AuthProvider } from "./context/authContext";
@@ -17,6 +18,14 @@ function App() {
               <ProtectedRoute>
                 <Home />
               </ProtectedRoute> //*Si se desean crear más rutas, es solo añadirlas dentro del protected route
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
             }
           />
           <Route path="/login" element={<Login />} />
